@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Vilkaites2</string>
+    <string name="btn_count_action">Translated button caption</string>
+    <string name="chars_caption">Chars</string>
+    <string-array name="selection_options">
+        <item>Chars</item>
+        <item>Words</item>
+    </string-array>
+</resources>
