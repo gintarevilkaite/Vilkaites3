@@ -11,7 +11,55 @@ import static org.junit.Assert.*;
  */
 public class ExampleUnitTest {
     @Test
-    public void addition_isCorrect() {
-        assertEquals(4, 2 + 2);
+    public void Given_EmptyText_getCharsCount_ZeroReturned() {
+        String givenString = "";
+
+        int expectedValue = 0;
+        int actualValue = TextCounter.getCharsCount(givenString);
+        assertEquals(expectedValue, actualValue);
     }
+    @Test
+    public void Given_EmptyText_getWordsCount_ZeroReturned() {
+        TextCounter tc = new TextCounter();
+        String givenString = "";
+
+        int expectedValue = 0;
+        int actualValue = tc.getWordsCount(givenString);
+        assertEquals(expectedValue, actualValue);
+    }
+    @Test
+    public void Given_NormalText_getCharsCount_CorrectValueReturned() {
+        String givenString = "This is a normal text.";
+
+        int expectedValue = 22;
+        int actualValue = TextCounter.getCharsCount(givenString);
+        assertEquals(expectedValue, actualValue);
+    }
+    @Test
+    public void Given_WhitespaceOnlyText_getCharsCount_ZeroReturned() {
+        String givenString = "   ";
+
+        int expectedValue = 0;
+        int actualValue = TextCounter.getCharsCount(givenString);
+        assertEquals(expectedValue, actualValue);
+    }
+    @Test
+    public void Given_WhitespaceOnlyText_getWordsCount_ZeroReturned() {
+        TextCounter tc = new TextCounter();
+        String givenString = "   ";
+
+        int expectedValue = 0;
+        int actualValue = tc.getWordsCount(givenString);
+        assertEquals(expectedValue, actualValue);
+    }
+    @Test
+    public void Given_NormalText_getWordsCount_CorrectValueReturned() {
+        TextCounter tc = new TextCounter();
+        String givenString = "This is a normal text.";
+
+        int expectedValue = 5;
+        int actualValue = tc.getWordsCount(givenString);
+        assertEquals(expectedValue, actualValue);
+    }
+
 }

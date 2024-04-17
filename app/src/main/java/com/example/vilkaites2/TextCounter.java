@@ -5,6 +5,7 @@ public class TextCounter {
         return phrase.length();
     }
     public static int getWordsCount(String phrase){
-        return phrase.length();
+        String[] words = phrase.trim().split("\\s+");
+        return words.length;
         }
 }

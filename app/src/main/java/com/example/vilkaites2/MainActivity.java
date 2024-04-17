@@ -63,8 +63,8 @@ public class MainActivity extends AppCompatActivity {
                 this.tvResults.setText(String.valueOf(CharsCount));
             }
             else {
-                int WordCount = TextCounter.getWordsCount(String.valueOf(phrase.split("\\s+").length));
-                this.tvResults.setText(String.valueOf(WordCount));
+                int wordCount = TextCounter.getWordsCount(phrase);
+                this.tvResults.setText(String.valueOf(wordCount));
                 Toast.makeText(this, phrase, Toast.LENGTH_SHORT).show();
 
             }
